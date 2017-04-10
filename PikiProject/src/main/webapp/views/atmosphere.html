@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>RestTemplate Demo</title>
+    <meta charset="utf-8"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few~~
+    </span>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el : '#app',
+        data:{
+            message:'Hello Vue!'
+        }
+    });
+    var app2 = new Vue({
+        el : '#app-2',
+        data : {
+            message:'You Loaded this Page on' +  new Date()
+        }
+    });
+</script>
+</body>
+</html>
